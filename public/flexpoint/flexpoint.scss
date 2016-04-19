@@ -5,7 +5,7 @@ $picnic-grid-gutter: 10px !default;
   display: -ms-flexbox;
   display: flex;
   margin-left: -$picnic-grid-gutter;
-  width: calc(100% + #{2 * $picnic-grid-gutter});
+  width: calc(100% + #{$picnic-grid-gutter});
   flex-wrap: wrap;
   transition: all .3s ease;
 }

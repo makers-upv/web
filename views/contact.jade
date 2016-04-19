@@ -1,0 +1,15 @@
+section#contact.contact.flex.one
+  form(method="POST" action="https://formspree.io/contacto@makersupv.com")
+    h2 Contáctanos
+    div.flex.one.two-600
+      div
+        input(name="nombre" placeholder="Nombre" required)
+      div
+        input(type="email" name="email" placeholder="Email" required)
+    div.flex
+      div
+        textarea(name="mensaje" placeholder="Message" required)
+    div.flex
+      div
+        input(type="hidden" name="_subject" value="Contacto web")
+        button.icon-plane(type="submit") Send

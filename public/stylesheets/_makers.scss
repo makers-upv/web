@@ -278,11 +278,7 @@ main {
 
 // Total size is 320 x 240px
 article {
-  width: 320px;
   position: relative;
-  float: left;
-  padding: 10px;
-  box-sizing: border-box;
   color: #333;
 
   a {
@@ -292,7 +288,7 @@ article {
   }
 
   h1 {
-    width: calc(100% - 40px);
+    width: calc(100% - 30px);
     position: absolute;
     color: #333;
     bottom: 20px;
@@ -317,19 +313,19 @@ article {
   time {
     position: absolute;
     padding: 6px 12px;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 10px;
     background: rgba(255, 255, 255, .8);
     color: #333;
     pointer-events: none;
-    }
+  }
 
 
   &::before {
     position: absolute;
     z-index: 1;
     padding: 6px 12px;
-    top: 20px;
+    top: 10px;
     left: 20px;
     background: rgba(255, 255, 255, .8);
     pointer-events: none;
@@ -463,4 +459,13 @@ article {
   .gallery {
     display: none;
   }
+}
+
+
+textarea {
+  height: 96px;
+}
+
+.contact {
+  margin: 80px 0;
 }
