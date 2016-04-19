@@ -1,0 +1,466 @@
+$text-shadow: 0px 0px 2px #000, 0px 0px 5px #000;
+
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 1.1em;
+  background: #eee;
+}
+
+body > footer {
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+
+
+nav {
+  .logo, .name {
+    display: inline-block;
+  }
+
+  .burger.pseudo.button {
+    font-size: 1.3em;
+  }
+}
+
+@media all and (min-width: $picnic-breakpoint) {
+  nav {
+    background: none;
+    height: 120px;
+    box-shadow: none;
+    text-shadow: $text-shadow;
+    transition: all .3s ease;
+    padding: 0 2em 0 $picnic-nav-sides;
+    .brand .logo {
+      width: 80px;
+      height: 80px;
+      transition: all .3s ease;
+    }
+    .logo, .name {
+      line-height: 70px;
+      padding: 0;
+    }
+    .name {
+      color: #fff;
+      margin-left: 10px;
+      transition: text-shadow 0;
+    }
+    .burger.pseudo.button {
+      color: #fff;
+    }
+    .menu .pseudo.button {
+      color: #fff;
+    }
+    .menu .button {
+      text-shadow: none;
+    }
+    .menu .pseudo.button {
+      text-shadow: $text-shadow;
+    }
+    .menu .pseudo.button:hover {
+      background: rgba(255, 255, 255, .2);
+    }
+  }
+
+  nav.active {
+    background: #fff;
+    height: 70px;
+    color: #333;
+    text-shadow: none;
+    padding: 0 $picnic-nav-sides;
+    box-shadow: $picnic-nav-shadow;
+    .brand .logo {
+      width: 50px;
+      height: 50px;
+    }
+    .name {
+      color: #333;
+      font-size: 1.5em;
+      text-shadow: none;
+      transition: text-shadow 0;
+    }
+    .menu .pseudo.button {
+      text-shadow: none;
+    }
+    .burger.pseudo.button {
+      color: #333;
+      line-height: 1em;
+      padding: .3em .6em;
+    }
+    .menu .pseudo.button {
+      color: #333;
+    }
+  }
+}
+
+.hero {
+  width: 100%;
+  height: 100%;
+  height: 100vh;
+  background: url('../images/hero.jpg');
+  background-color: #14110C;
+  background-size: cover;
+  background-position: 90% bottom;
+
+  &.small {
+    height: 300px;
+    background-position: 90% top;
+  }
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  padding: 2em;
+  font-size: 1.5em;
+
+  h1, p {
+    margin: 0;
+    padding: 0;
+  }
+
+  .hot a {
+    color: #fff;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 0 .3em;
+    display: inline-block;
+    transition: all .5s ease;
+  }
+
+  .hot:before {
+    content: "Destacado:";
+    display: inline;
+  }
+
+  .hot a:hover {
+    color: #333;
+    text-decoration: none;
+    box-shadow: 0 -2em rgba(255, 255, 255, 1) inset;
+  }
+}
+
+@media all and (max-width: $picnic-breakpoint * 1.2) {
+  .container {
+    font-size: 1.2em;
+  }
+}
+
+@media all and (max-width: $picnic-breakpoint) {
+  .name {
+    font-size: 1.2em;
+    margin-left: 5px;
+  }
+  .container {
+    padding: 1em;
+    font-size: 1.2em;
+    width: 100%;
+    background: rgba(0, 0, 0, .7);
+  }
+}
+
+
+
+
+header {
+  padding-top: 20px;
+  margin: 0 20px 60px;
+  display: block;
+  min-height: 100px;
+
+  .main {
+    float: left;
+  }
+
+  h1 {
+    font-family: sans-serif;
+    padding: 0;
+    font-size: 2em;
+    color: #333;
+    display: inline-block;
+    }
+
+  .subtitle {
+    font-weight: normal;
+    padding: .2em 0;
+    white-space: nowrap;
+    }
+
+  .action {
+    float: right;
+    margin: 10px;
+
+    .button {
+      margin-left: 15px;
+      }
+    }
+  }
+
+
+
+main {
+  display: block;
+  margin: 0 20px;
+  padding: 30px;
+  overflow: hidden;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.category {
+  text-align: center;
+
+  .button {
+    margin: 0 .2em;
+  }
+}
+
+.article {
+  margin: -100px auto 0;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  max-width: 1000px;
+
+  h1 {
+    padding-top: 0;
+  }
+}
+
+@media all and (max-width: $picnic-breakpoint) {
+  body {
+    font-size: 1em;
+  }
+  .hero.small {
+    display: none;
+  }
+  .article {
+    margin: 50px auto;
+    padding: 10px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.featured {
+  float: right;
+  width: 40%;
+  margin: 20px 0 20px 20px;
+}
+
+.flickr {
+  float: right;
+  margin: 20px 0 20px 20px;
+
+  iframe {
+    width: 480px;
+    height: 269px;
+  }
+}
+
+// Google forms
+.button.form {
+  font-size: 1.2em;
+  margin-bottom: 2em;
+}
+
+
+
+
+// Total size is 320 x 240px
+article {
+  width: 320px;
+  position: relative;
+  float: left;
+  padding: 10px;
+  box-sizing: border-box;
+  color: #333;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  h1 {
+    width: calc(100% - 40px);
+    position: absolute;
+    color: #333;
+    bottom: 20px;
+    left: 20px;
+    font-size: .9em;
+    box-sizing: border-box;
+    padding: 6px 12px;
+    background: rgba(255, 255, 255, .8);
+    z-index: 1;
+  }
+
+
+  img {
+    background-color: #ccc;
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 220px;
+  }
+
+  time {
+    position: absolute;
+    padding: 6px 12px;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, .8);
+    color: #333;
+    pointer-events: none;
+    }
+
+
+  &::before {
+    position: absolute;
+    z-index: 1;
+    padding: 6px 12px;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, .8);
+    pointer-events: none;
+  }
+
+  &.taller::before {
+    content: 'Taller';
+  }
+
+  &.blog::before {
+    content: 'Blog';
+  }
+
+  &.visita::before {
+    content: 'Visita';
+  }
+
+  &.charla::before {
+    content: 'Charla';
+  }
+
+  &.concurso::before {
+    content: 'Concurso';
+  }
+
+  &.proyecto::before {
+    content: 'Proyecto';
+  }
+
+  &.startup::before {
+    content: 'Startup';
+  }
+}
+
+
+
+
+#disqus_thread {
+  width: 100%;
+  margin-top: 30px;
+}
+
+@media all and (max-width: 1010px) {
+
+  header {
+    padding-top: 10px;
+    margin: 0 10px 40px;
+  }
+
+  header h1 {
+    font-size: 1.8em;
+  }
+
+  header .whatweare {
+    display: none;
+  }
+}
+
+
+@media all and (max-width: 640px) {
+
+
+  main {
+    margin: 0;
+    width: 100%;
+  }
+
+  header {
+    padding-top: 20px;
+    margin: 0 20px 20px;
+  }
+
+  header .logo {
+    float: none;
+    width: 80px;
+    height: 80px;
+  }
+
+  header .subtitle {
+    display: none;
+  }
+
+  header .action {
+    position: absolute;
+    text-align: right;
+    top: 0;
+    right: 0;
+    width: calc(100% - 100px);
+  }
+
+  article {
+    width: calc(100% - 20px);
+    height: auto;
+    box-sizing: content-box;
+    margin-bottom: -10px;
+  }
+
+  article h1 {
+    width: calc(100% - 20px);
+    left: 10px;
+    bottom: 10px;
+  }
+
+  article a {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%;
+    }
+
+  article time {
+    top: 10px;
+    right: 10px;
+  }
+
+  article img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .featured,
+  .flickr,
+  .flickr iframe {
+    float: none;
+    width: 100%;
+    margin: 0;
+  }
+
+  .gallery {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+extends layout
+
+// Give it the right title of this article
+block title
+  title Error 404
+
+block hero
+  .hero.small
+
+// Set the
+block content
+  main.article
+    h1 404 Article not found
+    p Couldn't find the requested article. Please 
+      a(href="/") go back home
+      | .

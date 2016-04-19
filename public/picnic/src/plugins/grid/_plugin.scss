@@ -1,0 +1,113 @@
+@import 'class';
+
+.grid {
+  @extend %grid;
+  
+  @include breakpoint($picnic-breakpoint) {
+    &.two > * {
+      @include grid-width(2);
+    }
+    &.three > * {
+      @include grid-width(3);
+    }
+    &.four > * {
+      @include grid-width(4);
+    }
+    &.five > * {
+      @include grid-width(5);
+    }
+    &.six > * {
+      @include grid-width(6);
+    }
+    
+    &.equal {
+      width: calc(100% + #{3 * $picnic-grid-gutter-horizontal});
+      
+      display: table;
+      table-layout: fixed;
+
+      border-spacing: $picnic-grid-gutter-horizontal 0;
+      margin: 0 0 $picnic-grid-gutter-vertical #{-$picnic-grid-gutter-horizontal};
+      
+      > * {
+        display: table-cell;
+        vertical-align: top;
+        margin: 0;
+        float: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+
+
+
+.row > * {
+    margin: $picnic-separation 0;
+}
+
+// From ungrid ( http://chrisnager.github.io/ungrid/ )
+@media (min-width: $picnic-breakpoint) {
+
+  // Each of the rows
+  .row {
+    width: calc(100% + 2 * #{$picnic-separation});
+    
+    display: table;
+    table-layout: fixed;
+
+    border-spacing: $picnic-separation 0;
+    margin: 0 0 $picnic-separation #{-$picnic-separation};
+  }
+
+  // For every child directly below row
+  .row > * {
+    display: table-cell;
+    vertical-align: top;
+    margin: 0;
+    float: none;
+  }
+
+  // Don't display this one
+  .none {
+    display: none;
+  }
+
+  .half {
+    width: 50%;
+  }
+
+  .third {
+    width: 33.3333%;
+  }
+
+  .two-third {
+    width: 66.6666%;
+  }
+
+  .fourth {
+    width: 25%;
+  }
+
+  .three-fourth {
+    width: 75%;
+  }
+
+  .fifth {
+    width: 20%;
+  }
+
+  .two-fifth {
+    width: 40%;
+  }
+
+  .three-fifth {
+    width: 60%;
+  }
+
+  .four-fifth {
+    width: 80%;
+  }
+}

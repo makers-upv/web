@@ -1,0 +1,6 @@
+.env
+db.json
+node_modules
+db/*.html
+db/*.css
+public/images/icons/*.jpg

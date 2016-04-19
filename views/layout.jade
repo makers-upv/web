@@ -1,0 +1,71 @@
+doctype html
+html
+  head
+    block title
+      title Makers UPV
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    meta(name="keywords" content="Makers UPV, Makers, Valencia")
+    meta(name="description" content="Comunidad de ingenieros, emprendedores, soñadores, idealistas y demás mentes inquietas que queremos llevar a cabo proyectos interesantes, aprendiendo lo que no aprendemos en la Uni")
+    link(rel='stylesheet' href='//cdn.jsdelivr.net/flexpoint/1/flexpoint.min.css')
+    link(rel='stylesheet' href='/stylesheets/style.min.css')
+    link(rel="icon", href="/images/logo.png", type="image/png")
+    block facebookimage
+      meta(property='og:title' content="Makers UPV")
+      meta(property='og:type' content="website")
+      meta(property='og:description' content="La comunidad de estudiantes en movimiento")
+      meta(property='og:url' content="http://www.makersupv.com/")
+      meta(property='og:image' content="http://www.makersupv.com/images/logo.svg")
+    block addedstyle
+
+    script.
+      var _gaq = _gaq || [];
+      _gaq.push(['_setAccount', '#{env.analytics}']);
+      _gaq.push(['_trackPageview']);
+
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+
+  body
+    
+    nav
+      a.brand(href="http://makersupv.com/")
+        img.logo(src="/images/logo.svg")
+        h2.name Makers UPV
+        
+      input(id="bmenub" type="checkbox" class="show")
+      label(for="bmenub" class="burger pseudo button") &#8801;
+      .menu
+        a.pseudo.button(href="/Qué-es-Makers") Asociación
+        a#signup.button.join(href="/Hazte-Maker") Hazte Maker
+        
+    block hero
+      .hero
+        .container
+          h1 Makers UPV
+          p La comunidad de estudiantes en movimiento
+          if hot
+            p.hot
+              a(href="/" + hot.id)= hot.title
+    
+    block content
+
+    footer 
+      strong Makers UPV.
+      = " Encuéntranos en " 
+      a(href="https://www.facebook.com/makersupv/") Facebook
+      = " | " 
+      a(href="https://twitter.com/MakersUPV") Twitter 
+      = " | " 
+      a(href="http://github.com/makers-upv") Github 
+      = " | " 
+      a(href="https://www.linkedin.com/groups/Makers-UPV-8123860") Linkedin 
+      = " | " 
+      a(href="https://www.flickr.com/photos/129849875@N03/") Flickr
+      
+      
+  script(src='https://cdn.jsdelivr.net/umbrella/2/umbrella.min.js')
+  script(src='javascript/javascript.js')

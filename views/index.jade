@@ -1,0 +1,22 @@
+extend layout
+
+block content
+  main
+  
+    div.flex.one.two-600.three-900
+      div.category.full
+        each item in categories
+          label
+            input(type="checkbox" data-type=item) 
+            span.toggle.pseudo.button= item.charAt(0).toUpperCase() + item.slice(1)
+        
+      each article, index in blog
+        article(class=article.type)
+          a(href="/" + article.id)
+            h1= article.title
+            if index < 9
+              img(src= article.img alt="Imagen de " + article.title)
+            else
+              img.lazy(src="images/logo.svg" data-src= article.img alt="Imagen de " + article.title)
+            
+            time(datetime=article.datetime)= article.date
