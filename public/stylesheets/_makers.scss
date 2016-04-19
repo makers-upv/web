@@ -238,6 +238,10 @@ main {
   body {
     font-size: 1em;
   }
+
+  main {
+    padding: 10px;
+  }
   .hero.small {
     display: none;
   }
@@ -419,13 +423,9 @@ article {
   article {
     width: calc(100% - 20px);
     height: auto;
-    box-sizing: content-box;
-    margin-bottom: -10px;
   }
 
   article h1 {
-    width: calc(100% - 20px);
-    left: 10px;
     bottom: 10px;
   }
 
@@ -467,5 +467,6 @@ textarea {
 }
 
 .contact {
-  margin: 80px 0;
+  margin-top: 80px;
+  margin-bottom: 40px;
 }
