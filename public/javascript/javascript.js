@@ -40,13 +40,14 @@ function reloadParts(){
 u('.category input').on('change', reloadParts);
 reloadParts();
 
-u('#contact form').ajax(function(err, data){
-  if (err) {
-    swal("Oops!", "Something went wrong, please contact us at hyperloopupv@gmail.com", "error");
-  } else {
-    swal("Awesome!", "We'll get in touch as soon as possible", "success");
-    u('#contact form').first().reset();
-  }
-}, function(){
-  u('[name="_cc"]').first().value = 'public' + 'francisco' + "@" + 'hotmail.com';
-});
+// u('#contact form').ajax(function(err, data){
+//   console.log(err, data);
+//   if (err) {
+//     swal("Oops!", "Something went wrong, please contact us at contacto@makersupv.com", "error");
+//   } else {
+//     swal("Awesome!", "We'll get in touch as soon as possible", "success");
+//     u('#contact form').first().reset();
+//   }
+// }, function(){
+//   u('[name="_cc"]').first().value = 'public' + 'francisco' + "@" + 'hotmail.com';
+// });
