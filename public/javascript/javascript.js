@@ -43,9 +43,9 @@ reloadParts();
 u('#contact form').ajax(function(err, data){
   console.log(err, data);
   if (err) {
-    swal("Oops!", "Something went wrong, please contact us at contacto@makersupv.com", "error");
+    swal("Oops!", "Algo ha fallado, por favor contáctanos en contacto" + "@" + "makersupv.com", "error");
   } else {
-    swal("Awesome!", "We'll get in touch as soon as possible", "success");
+    swal("Enviado!", "Nos pondremos en contacto tan pronto como sea posible", "success");
     u('#contact form').first().reset();
   }
 }, function(){
