@@ -98,6 +98,7 @@ nav {
 }
 
 .hero {
+  position: relative;
   width: 100%;
   height: 100%;
   height: 100vh;
@@ -105,6 +106,7 @@ nav {
   background-color: #14110C;
   background-size: cover;
   background-position: 90% bottom;
+  // http://stackoverflow.com/a/28151062/938236
   transition: height 999999s;
 
   &.small {
@@ -161,7 +163,6 @@ nav {
   .container {
     padding: 1em;
     font-size: 1.2em;
-    bottom: 60px;
     width: 100%;
     background: rgba(0, 0, 0, .7);
   }
