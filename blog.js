@@ -3,7 +3,7 @@ var drive = require("drive-db")(process.env.drive.replace(/^\s+/, '').replace(/\
 drive.onload = require('./driveafter');
 drive.timeout = 1;
 
-var categories = ['startup', 'charla', 'blog', 'concurso', 'proyecto', 'taller', 'visita'];
+var categories = ['trabajo', 'startup', 'charla', 'blog', 'concurso', 'proyecto', 'taller', 'visita'];
 
 
 
