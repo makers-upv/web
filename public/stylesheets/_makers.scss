@@ -105,6 +105,7 @@ nav {
   background-color: #14110C;
   background-size: cover;
   background-position: 90% bottom;
+  transition: height 999999s;
 
   &.small {
     height: 300px;
