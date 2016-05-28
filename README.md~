@@ -17,7 +17,7 @@ Then you will need to install them. For this you need Node.js:
 npm install
 ```
 
-Rename the file `.env_demo` to `.env` and fill in the private variables. Then run it:
+Copy the file `.env_demo` as `.env` and fill in the private variables. Then run it:
 
 ```bash
 node app.js
