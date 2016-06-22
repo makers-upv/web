@@ -20,6 +20,7 @@ body > footer {
 nav {
   .logo, .name {
     display: inline-block;
+    box-shadow: none;
   }
 
   .burger.pseudo.button {
