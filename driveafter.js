@@ -98,12 +98,13 @@ module.exports = function (saveCache){
     drive.data[index].img = 'images/icons/' + encodeURIComponent(value.id) + '.jpg';
 
     function getFilesizeInKiloBytes(filename) {
+      filename = __dirname + '/public/' + filename;
       if (!filename || !fs.existsSync(filename)) {
         return 0;
       }
-      console.log("Size:", fs.statSync(filename));
       var stats = fs.statSync(filename);
-      var fileSizeInBytes = stats["size"]
+      var fileSizeInBytes = stats["size"];
+      console.log("Size:", fileSizeInBytes);
       return fileSizeInBytes / 1000;
     }
 
