@@ -101,7 +101,8 @@ module.exports = function (saveCache){
       if (!filename || !fs.existsSync(filename)) {
         return 0;
       }
-      var stats = fs.statSync(filename)
+      console.log("Size:", fs.statSync(filename));
+      var stats = fs.statSync(filename);
       var fileSizeInBytes = stats["size"]
       return fileSizeInBytes / 1000;
     }
