@@ -97,6 +97,16 @@ module.exports = function (saveCache){
 
     drive.data[index].img = 'images/icons/' + encodeURIComponent(value.id) + '.jpg';
 
+    function getFilesizeInKiloBytes(filename) {
+      var stats = fs.statSync(filename)
+      var fileSizeInBytes = stats["size"]
+      return fileSizeInBytes / 1000;
+    }
+
+    if (getFilesizeInKiloBytes(drive.data[index].img) > 200) {
+      drive.data[index].img = '';
+    }
+
     // Retrieve the individual articles
     request(docUrl(value.article), storeArticle);
   });

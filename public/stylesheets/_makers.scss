@@ -367,6 +367,10 @@ article {
   &.startup::before {
     content: 'Startup';
   }
+
+  &.trabajo::before {
+    content: 'Trabajo';
+  }
 }
 
 
