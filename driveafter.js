@@ -108,7 +108,7 @@ module.exports = function (saveCache){
       return fileSizeInBytes / 1000;
     }
 
-    if (getFilesizeInKiloBytes(drive.data[index].img) > 200) {
+    if (getFilesizeInKiloBytes(drive.data[index].img) > (process.env.MAX_SIZE || 200)) {
       drive.data[index].img = '';
     }
 
